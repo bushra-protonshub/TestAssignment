@@ -9,8 +9,11 @@
 import Alamofire
 
 class WebServiceHandler: NSObject {
+
+    static var indexOfPageToRequest = 1
+    
     class func getHits(completion: @escaping ([Hits]?) -> ()) {
-        let hitURL: String = "https://hn.algolia.com/api/v1/search_by_date?tags=story&page=1"
+        let hitURL: String = "https://hn.algolia.com/api/v1/search_by_date?tags=story&page=\(indexOfPageToRequest)"
         Alamofire.request(hitURL, method: .get, parameters: nil, encoding: JSONEncoding.default)
             .responseJSON { response in
                 switch response.result{

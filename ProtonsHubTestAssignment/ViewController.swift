@@ -60,6 +60,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.doSelection(!(cell?.setSelected ?? false))
         setNavigationTitle()
     }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.hits.count - 1 {
+            WebServiceHandler.indexOfPageToRequest = +1
+            viewModel.getHits()
+        }
+    }
 }
 
 extension ViewController: ViewModelDelegate {

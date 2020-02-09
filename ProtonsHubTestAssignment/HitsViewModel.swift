@@ -14,6 +14,7 @@ protocol ViewModelDelegate: class {
 class HitsViewModel {
     var hits: [Hits] = []
     weak var delegate: ViewModelDelegate?
+    
     func getHits() {
         WebServiceHandler.getHits { [weak self](hits) in
             if let hits_ = hits {
