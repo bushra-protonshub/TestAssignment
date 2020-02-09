@@ -18,7 +18,9 @@ class HitsViewModel {
     func getHits() {
         WebServiceHandler.getHits { [weak self](hits) in
             if let hits_ = hits {
-                self?.hits = hits_
+                for i in hits_ {
+                    self?.hits.append(i)
+                }
                 self?.delegate?.reloadTable()
             }
         }
