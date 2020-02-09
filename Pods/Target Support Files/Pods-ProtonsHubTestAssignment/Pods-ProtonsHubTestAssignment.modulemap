@@ -1,0 +1,6 @@
+framework module Pods_ProtonsHubTestAssignment {
+  umbrella header "Pods-ProtonsHubTestAssignment-umbrella.h"
+
+  export *
+  module * { export * }
+}

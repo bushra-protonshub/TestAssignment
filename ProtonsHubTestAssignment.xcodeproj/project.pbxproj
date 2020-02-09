@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,9 +12,16 @@
 		59354E4B23F0000B001D2B50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59354E4923F0000B001D2B50 /* Main.storyboard */; };
 		59354E4D23F0000E001D2B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59354E4C23F0000E001D2B50 /* Assets.xcassets */; };
 		59354E5023F0000E001D2B50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59354E4E23F0000E001D2B50 /* LaunchScreen.storyboard */; };
+		59354E5823F0020B001D2B50 /* Hits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59354E5723F0020B001D2B50 /* Hits.swift */; };
+		59354E5A23F003D1001D2B50 /* WebserviceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59354E5923F003D1001D2B50 /* WebserviceHandler.swift */; };
+		59354E5C23F00EE8001D2B50 /* HitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59354E5B23F00EE8001D2B50 /* HitsViewModel.swift */; };
+		59354E5E23F010B3001D2B50 /* HitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59354E5D23F010B3001D2B50 /* HitsTableViewCell.swift */; };
+		775D4B250FE47A8E6DDCDCD2 /* Pods_ProtonsHubTestAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DF273277294CB16B7BE68E /* Pods_ProtonsHubTestAssignment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05DF273277294CB16B7BE68E /* Pods_ProtonsHubTestAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProtonsHubTestAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		279C48A68BF255622311B9F7 /* Pods-ProtonsHubTestAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProtonsHubTestAssignment.debug.xcconfig"; path = "Target Support Files/Pods-ProtonsHubTestAssignment/Pods-ProtonsHubTestAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		59354E4223F0000B001D2B50 /* ProtonsHubTestAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtonsHubTestAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59354E4523F0000B001D2B50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59354E4723F0000B001D2B50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,11 @@
 		59354E4C23F0000E001D2B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59354E4F23F0000E001D2B50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59354E5123F0000E001D2B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59354E5723F0020B001D2B50 /* Hits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hits.swift; sourceTree = "<group>"; };
+		59354E5923F003D1001D2B50 /* WebserviceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceHandler.swift; sourceTree = "<group>"; };
+		59354E5B23F00EE8001D2B50 /* HitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsViewModel.swift; sourceTree = "<group>"; };
+		59354E5D23F010B3001D2B50 /* HitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsTableViewCell.swift; sourceTree = "<group>"; };
+		5CBBBA0DD6019CC5BF2B7030 /* Pods-ProtonsHubTestAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProtonsHubTestAssignment.release.xcconfig"; path = "Target Support Files/Pods-ProtonsHubTestAssignment/Pods-ProtonsHubTestAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775D4B250FE47A8E6DDCDCD2 /* Pods_ProtonsHubTestAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				59354E4423F0000B001D2B50 /* ProtonsHubTestAssignment */,
 				59354E4323F0000B001D2B50 /* Products */,
+				8B1B6FB09C374CD29AB74CCB /* Pods */,
+				F3734F17978A3015821EE23A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +75,29 @@
 				59354E4C23F0000E001D2B50 /* Assets.xcassets */,
 				59354E4E23F0000E001D2B50 /* LaunchScreen.storyboard */,
 				59354E5123F0000E001D2B50 /* Info.plist */,
+				59354E5723F0020B001D2B50 /* Hits.swift */,
+				59354E5923F003D1001D2B50 /* WebserviceHandler.swift */,
+				59354E5B23F00EE8001D2B50 /* HitsViewModel.swift */,
+				59354E5D23F010B3001D2B50 /* HitsTableViewCell.swift */,
 			);
 			path = ProtonsHubTestAssignment;
+			sourceTree = "<group>";
+		};
+		8B1B6FB09C374CD29AB74CCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				279C48A68BF255622311B9F7 /* Pods-ProtonsHubTestAssignment.debug.xcconfig */,
+				5CBBBA0DD6019CC5BF2B7030 /* Pods-ProtonsHubTestAssignment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3734F17978A3015821EE23A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05DF273277294CB16B7BE68E /* Pods_ProtonsHubTestAssignment.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59354E5423F0000E001D2B50 /* Build configuration list for PBXNativeTarget "ProtonsHubTestAssignment" */;
 			buildPhases = (
+				F0A4F183789A3B5D29E836B5 /* [CP] Check Pods Manifest.lock */,
 				59354E3E23F0000B001D2B50 /* Sources */,
 				59354E3F23F0000B001D2B50 /* Frameworks */,
 				59354E4023F0000B001D2B50 /* Resources */,
+				8F62B3849953AD9244990BB6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +168,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8F62B3849953AD9244990BB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProtonsHubTestAssignment/Pods-ProtonsHubTestAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProtonsHubTestAssignment/Pods-ProtonsHubTestAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProtonsHubTestAssignment/Pods-ProtonsHubTestAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0A4F183789A3B5D29E836B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProtonsHubTestAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		59354E3E23F0000B001D2B50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				59354E4823F0000B001D2B50 /* ViewController.swift in Sources */,
+				59354E5C23F00EE8001D2B50 /* HitsViewModel.swift in Sources */,
 				59354E4623F0000B001D2B50 /* AppDelegate.swift in Sources */,
+				59354E5823F0020B001D2B50 /* Hits.swift in Sources */,
+				59354E5A23F003D1001D2B50 /* WebserviceHandler.swift in Sources */,
+				59354E5E23F010B3001D2B50 /* HitsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +364,7 @@
 		};
 		59354E5523F0000E001D2B50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 279C48A68BF255622311B9F7 /* Pods-ProtonsHubTestAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +382,7 @@
 		};
 		59354E5623F0000E001D2B50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CBBBA0DD6019CC5BF2B7030 /* Pods-ProtonsHubTestAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
