@@ -10,16 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
     var viewModel = HitsViewModel()
-    var cell = HitsTableViewCell()
     @IBOutlet var tableView: UITableView!
     @IBOutlet var navigationBar: UINavigationBar!
+    @IBOutlet var refreshLabel: UILabel!
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(ViewController.handleRefresh(_:)),
+                                 for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.red
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching More Data ...")
+        
+        return refreshControl
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.addSubview(self.refreshControl)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 300
         viewModel.delegate = self
-        cell.delegate = self
         viewModel.getHits()
         setNavigationTitle()
     }
@@ -38,6 +49,19 @@ class ViewController: UIViewController {
             self.navigationItem.title = "\(selectedCells) Hits selected"
         }
     }
+    
+    @objc func reloadTitle(sender: UISwitch) {
+        self.setNavigationTitle()
+    }
+
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        refreshLabel.isHidden = true
+        WebServiceHandler.indexOfPageToRequest = +1
+        viewModel.getHits()
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
+        refreshLabel.isHidden = false
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -51,22 +75,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if let cell = cell {
             cell.title.text = hit.title
             cell.createdAt.text = hit.created_at
+            cell.switch.addTarget(self, action: #selector(reloadTitle(sender:)), for: .touchUpInside)
         }
         return cell!
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as? HitsTableViewCell
+        tableView.deselectRow(at: indexPath, animated: true)
         cell?.doSelection(!(cell?.setSelected ?? false))
         setNavigationTitle()
     }
 
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.hits.count - 1 {
-            WebServiceHandler.indexOfPageToRequest = +1
-            viewModel.getHits()
-        }
-    }
 }
 
 extension ViewController: ViewModelDelegate {
@@ -74,11 +94,5 @@ extension ViewController: ViewModelDelegate {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-    }
-}
-
-extension ViewController: CellDelegate {
-    func reloadTitle() {
-        self.setNavigationTitle()
     }
 }

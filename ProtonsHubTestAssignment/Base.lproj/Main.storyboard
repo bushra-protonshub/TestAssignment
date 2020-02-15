@@ -28,7 +28,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OsN-O1-fGM">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HitsTableViewCell" rowHeight="127" id="rfX-m5-sI2" customClass="HitsTableViewCell" customModule="ProtonsHubTestAssignment" customModuleProvider="target">
@@ -91,28 +91,41 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="DZp-xy-s1L"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pull to load more data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSO-27-ogG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="2C2-eW-15d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="OsN-O1-fGM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5H7-vq-1OH"/>
                             <constraint firstItem="xBi-7D-DJr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5nz-XP-4w8"/>
-                            <constraint firstItem="OsN-O1-fGM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CcG-fM-h0f"/>
+                            <constraint firstItem="iSO-27-ogG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8yu-5l-LKm"/>
+                            <constraint firstItem="OsN-O1-fGM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I5B-n5-sMm"/>
                             <constraint firstItem="xBi-7D-DJr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PyY-9f-FUg"/>
-                            <constraint firstItem="OsN-O1-fGM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="V1r-UY-dtk"/>
                             <constraint firstItem="xBi-7D-DJr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XCv-hm-RRc"/>
-                            <constraint firstItem="OsN-O1-fGM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ama-uN-gjw"/>
-                            <constraint firstItem="OsN-O1-fGM" firstAttribute="top" secondItem="xBi-7D-DJr" secondAttribute="bottom" id="yfU-bE-yZe"/>
+                            <constraint firstItem="OsN-O1-fGM" firstAttribute="top" secondItem="iSO-27-ogG" secondAttribute="bottom" id="iCD-xF-0qM"/>
+                            <constraint firstItem="OsN-O1-fGM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jla-yO-xrE"/>
+                            <constraint firstItem="iSO-27-ogG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sT2-8q-GI0"/>
+                            <constraint firstItem="iSO-27-ogG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xgH-Fl-reS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="OnV-wW-pVO"/>
                     <connections>
                         <outlet property="navigationBar" destination="xBi-7D-DJr" id="ju5-Vq-RoM"/>
+                        <outlet property="refreshLabel" destination="iSO-27-ogG" id="Eh2-qA-dnK"/>
                         <outlet property="tableView" destination="OsN-O1-fGM" id="U85-NP-O1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="-21"/>
+            <point key="canvasLocation" x="-191.19999999999999" y="-21.139430284857571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jWV-8K-Lan">
